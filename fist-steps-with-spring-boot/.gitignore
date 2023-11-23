@@ -86,3 +86,7 @@ Copy code
 **/*.iml
 **/.idea
 **/.gradle
+/.idea
+.idea/
+workspace.xml
+uiDesigner.xml

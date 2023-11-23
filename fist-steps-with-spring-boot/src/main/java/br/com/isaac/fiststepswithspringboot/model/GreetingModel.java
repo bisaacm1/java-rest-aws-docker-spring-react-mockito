@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Greeting {
+public class GreetingModel {
   private final long id;
   private final String content;
 

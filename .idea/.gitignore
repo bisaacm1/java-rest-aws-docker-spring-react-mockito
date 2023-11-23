@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/compiler.xml
+/encodings.xml
+/jarRepositories.xml
+/java-rest-spring-boot.iml
+/misc.xml
+/modules.xml
+/vcs.xml
+/settings.json
