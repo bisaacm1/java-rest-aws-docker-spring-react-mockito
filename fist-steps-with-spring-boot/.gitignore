@@ -1,33 +1,88 @@
-HELP.md
+# Ignore compiled class files
+*.class
+
+# Ignore Node.js modules
+/node_modules
+
+# SSH Keys
+*.pem
+*.ppk
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Merge Files
+*.bak
+
+# Gradle temporary files
+/build/
+/buildSrc/
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+/bin/
+/blog/bin/
+**/.tern-project
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# IntelliJ IDEA files
+**/*.iml
+**/.idea
+**/.gradle
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# macOS system file
+.DS_Store
 
-### VS Code ###
-.vscode/
+# Virtual machine crash logs
+hs_err_pid*
+
+
+
+Certainly! Including .DS_Store in your .gitignore file prevents the macOS system file from being tracked by Git. Here's an updated version of your .gitignore file that includes ignoring .DS_Store:
+
+gitignore
+Copy code
+# Ignore compiled class files
+*.class
+
+# Ignore Node.js modules
+/node_modules
+
+# SSH Keys
+*.pem
+*.ppk
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Merge Files
+*.bak
+
+# Gradle temporary files
+/build/
+/buildSrc/
+
+# Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+/bin/
+/blog/bin/
+**/.tern-project
+
+# IntelliJ IDEA files
+**/*.iml
+**/.idea
+**/.gradle
