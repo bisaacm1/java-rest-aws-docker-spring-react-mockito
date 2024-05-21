@@ -2,7 +2,7 @@
 
 The following was discovered as part of building this project:
 
-- The original package name 'br.com.isaac.fist-steps-with-spring-boot' is invalid and this project uses 'br.com.isaac.javarestawsdockerspringreactmockito' instead.
+- The original package name 'br.com.isaac.java-rest-aws-docker-spring-react-mockito' is invalid and this project uses 'br.com.isaac.javarestawsdockerspringreactmockito' instead.
 
 # Getting Started
 
