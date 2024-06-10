@@ -6,7 +6,7 @@ import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
 
 public interface PersonServiceImpl {
 
-  Person findById(String value1);
+  Person findById(Long value1);
 
   List<Person> findAll();
 
@@ -14,5 +14,5 @@ public interface PersonServiceImpl {
 
   Person update(Person person);
 
-  void delete(String id);
+  void delete(Long id);
 }

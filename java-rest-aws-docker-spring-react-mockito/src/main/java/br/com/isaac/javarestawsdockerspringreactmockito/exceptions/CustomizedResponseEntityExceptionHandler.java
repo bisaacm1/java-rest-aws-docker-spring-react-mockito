@@ -25,13 +25,13 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
     return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
-  @ExceptionHandler(UnsuportedMathOperationException.class)
-  public final ResponseEntity<ExceptionResponse> handlerBadRequestExceptions(Exception ex, WebRequest request) {
+  @ExceptionHandler(ResourceNotFoundExepition.class)
+  public final ResponseEntity<ExceptionResponse> handlerNotFoundExceptions(Exception ex, WebRequest request) {
     ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
         request.getDescription(false));
 
     logger.error(EnumMessagesType.ERROR_UNSUPPERTED_MATH_OPERATION_ERROR.getMessage(), ex);
-    return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
+    return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
   }
 
 }
