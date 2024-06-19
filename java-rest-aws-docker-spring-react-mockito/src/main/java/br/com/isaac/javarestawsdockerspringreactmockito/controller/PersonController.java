@@ -20,7 +20,7 @@ public class PersonController implements IPersonController {
   }
 
   @Override
-  public ResponseEntity<Person> findByid(String id) {
+  public ResponseEntity<Person> findByid(Long id) {
     return ResponseEntity.ok(service.findById(id));
   }
 
@@ -40,7 +40,8 @@ public class PersonController implements IPersonController {
   }
 
   @Override
-  public void delete(String id) {
+  public ResponseEntity<?> delete(Long id) {
     service.delete(id);
+    return ResponseEntity.noContent().build();
   }
 }
