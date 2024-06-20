@@ -11,21 +11,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
 
 public interface IPersonController {
 
   @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<Person> findByid(@PathVariable Long id);
+  public ResponseEntity<PersonVO> findByid(@PathVariable Long id);
 
   @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<List<Person>> findAll();
+  public ResponseEntity<List<PersonVO>> findAll();
 
   @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<Person> create(@RequestBody Person person);
+  public ResponseEntity<PersonVO> create(@RequestBody PersonVO person);
 
   @PutMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<Person> update(@RequestBody Person person);
+  public ResponseEntity<PersonVO> update(@RequestBody PersonVO person);
 
   @DeleteMapping(value = "/{id}")
   public ResponseEntity<?> delete(@PathVariable Long id);

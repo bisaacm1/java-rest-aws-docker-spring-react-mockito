@@ -2,17 +2,17 @@
 
 import java.util.List;
 
-import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
 
 public interface PersonServiceImpl {
 
-  Person findById(Long value1);
+  PersonVO findById(Long value1);
 
-  List<Person> findAll();
+  List<PersonVO> findAll();
 
-  Person create(Person person);
+  PersonVO create(PersonVO person);
 
-  Person update(Person person);
+  PersonVO update(PersonVO person);
 
   void delete(Long id);
 }
