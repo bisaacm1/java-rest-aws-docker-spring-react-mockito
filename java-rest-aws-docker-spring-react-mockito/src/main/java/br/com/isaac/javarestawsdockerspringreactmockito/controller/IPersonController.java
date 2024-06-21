@@ -18,7 +18,7 @@ public interface IPersonController {
   @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<PersonVO> findByid(@PathVariable Long id);
 
-  @GetMapping(value = "/ ", produces = MediaType.APPLICATION_JSON_VALUE)
+  @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<List<PersonVO>> findAll();
 
   @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
