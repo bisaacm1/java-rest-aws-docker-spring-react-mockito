@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.v1.PersonVO;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.v2.PersonVOV2;
 
 public interface IPersonController {
 
@@ -23,6 +24,9 @@ public interface IPersonController {
 
   @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<PersonVO> create(@RequestBody PersonVO person);
+
+  @PostMapping(value = "/v2/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<PersonVOV2> createV2(@RequestBody PersonVOV2 person);
 
   @PutMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity<PersonVO> update(@RequestBody PersonVO person);

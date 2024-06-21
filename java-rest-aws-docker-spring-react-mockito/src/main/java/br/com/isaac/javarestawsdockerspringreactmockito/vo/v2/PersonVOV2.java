@@ -1,6 +1,7 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.vo;
+﻿package br.com.isaac.javarestawsdockerspringreactmockito.vo.v2;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode
-public class PersonVO implements Serializable {
+public class PersonVOV2 implements Serializable {
   private static final long serialVersionUID = 1L;
 
   private Long id;
@@ -19,4 +20,5 @@ public class PersonVO implements Serializable {
   private String lastName;
   private String address;
   private String gender;
+  private Date birthDay;
 }

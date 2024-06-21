@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.isaac.javarestawsdockerspringreactmockito.service.PersonService;
-import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.v1.PersonVO;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.v2.PersonVOV2;
 
 @RestController
 @RequestMapping("/person")
@@ -32,6 +33,11 @@ public class PersonController implements IPersonController {
   @Override
   public ResponseEntity<PersonVO> create(PersonVO person) {
     return ResponseEntity.ok(service.create(person));
+  }
+
+  @Override
+  public ResponseEntity<PersonVOV2> createV2(PersonVOV2 person) {
+    return ResponseEntity.ok(service.createV2(person));
   }
 
   @Override

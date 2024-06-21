@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
 import br.com.isaac.javarestawsdockerspringreactmockito.utils.MockPerson;
-import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.v1.PersonVO;
 
 public class DozerMapperTest {
 

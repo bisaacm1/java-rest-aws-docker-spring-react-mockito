@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
-import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
+import br.com.isaac.javarestawsdockerspringreactmockito.vo.v1.PersonVO;
 
 public class MockPerson {
 
