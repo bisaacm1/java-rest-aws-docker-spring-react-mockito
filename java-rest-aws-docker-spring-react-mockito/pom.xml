@@ -20,7 +20,8 @@
 		<java.version>17</java.version>
 		<dozer.version>6.1.0</dozer.version>
 		<jupiter.version>5.8.2</jupiter.version>
-		<lombok.version>1.18.22</lombok.version>
+		<flyway.version>7.15.0</flyway.version>
+		<mysql.version>8.0.33</mysql.version>
 	</properties>
 
 	<dependencies>
@@ -38,6 +39,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
 
 		<!-- Lombok -->
@@ -72,6 +74,7 @@
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
+			<version>${flyway.version}</version>
 		</dependency>
 	</dependencies>
 
