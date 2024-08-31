@@ -1,0 +1,106 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "person-java-rest",
+    "collectionId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+    "dateExported": "2024-08-31T15:35:36.282Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "76162897-810e-440b-aa2e-14c46cd38e84",
+            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "containerId": "",
+            "name": "Person Update",
+            "url": "http://localhost:8080/person/update",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-08-31T15:34:58.605Z",
+            "modified": "2024-08-31T15:34:58.605Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 11,\n  \"first_name\": \"John ty\",\n  \"last_name\": \"Doe\",\n  \"address\": \"teste er t\",\n  \"gender\": \"Male\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "df791beb-cda9-45b2-9aef-8dc2bb64d5a3",
+            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "containerId": "",
+            "name": "Person Get All",
+            "url": "http://localhost:8080/person/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-31T15:35:06.080Z",
+            "modified": "2024-08-31T15:35:06.080Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "2e144ba5-0346-4543-9a6e-f0bde4786a6e",
+            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "containerId": "",
+            "name": "Person Get By ID",
+            "url": "http://localhost:8080/person/9",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-08-31T15:35:10.686Z",
+            "modified": "2024-08-31T15:35:10.686Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\": \"Isaac\",\n  \"lastName\": \"Batista\",\n  \"address\": \"Rua Ananias de Almeida, 241\",\n  \"gender\": \"Masculino\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "74f9ea66-542e-4d38-b54b-de9e811c2e3b",
+            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "containerId": "",
+            "name": "Person Create",
+            "url": "http://localhost:8080/person/create",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-08-31T15:35:15.997Z",
+            "modified": "2024-08-31T15:35:15.997Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"address\": \"teste er\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"gender\": \"Male\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "e71d5ca3-6bae-4176-b39b-8a612345c682",
+            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "containerId": "",
+            "name": "Person Delete",
+            "url": "http://localhost:8080/person/8",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-08-31T15:35:20.188Z",
+            "modified": "2024-08-31T15:35:20.188Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\": \"Alexandre\",\n  \"lastName\": \"Menezes\",\n  \"address\": \"Orlando - EUA\",\n  \"gender\": \"Male\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "n8mU99UDh0rS7CQ_ZlKJ63HeEfI_mnFWONpvQwdBwMU8Ku9bW6BgJ1y7PDcJfhaL3zz5A3UP5K5WTOk68XZgzQ"
+}

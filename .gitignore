@@ -1,0 +1,54 @@
+﻿# Java and Maven specific
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# Spring Boot specific
+*.log
+spring.log
+
+# Flyway migrations
+flyway.properties
+
+# Lombok specific
+lombok.config
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Generated files
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Docker
+docker-compose.override.yml
