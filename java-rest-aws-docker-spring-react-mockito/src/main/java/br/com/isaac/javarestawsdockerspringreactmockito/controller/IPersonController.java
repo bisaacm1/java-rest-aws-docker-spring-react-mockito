@@ -15,16 +15,20 @@ import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
 
 public interface IPersonController {
 
-  @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+  @GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
   public ResponseEntity<PersonVO> findByid(@PathVariable Long id);
 
-  @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+  @GetMapping(value = "/", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
   public ResponseEntity<List<PersonVO>> findAll();
 
-  @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+  @PostMapping(value = "/create", produces = { MediaType.APPLICATION_JSON_VALUE,
+      MediaType.APPLICATION_XML_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE,
+          MediaType.APPLICATION_XML_VALUE })
   public ResponseEntity<PersonVO> create(@RequestBody PersonVO person);
 
-  @PutMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+  @PutMapping(value = "/update", produces = { MediaType.APPLICATION_JSON_VALUE,
+      MediaType.APPLICATION_XML_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE,
+          MediaType.APPLICATION_XML_VALUE })
   public ResponseEntity<PersonVO> update(@RequestBody PersonVO person);
 
   @DeleteMapping(value = "/{id}")

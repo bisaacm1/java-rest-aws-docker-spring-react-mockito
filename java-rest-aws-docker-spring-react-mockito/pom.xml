@@ -76,6 +76,11 @@
 			<artifactId>flyway-core</artifactId>
 			<version>${flyway.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
