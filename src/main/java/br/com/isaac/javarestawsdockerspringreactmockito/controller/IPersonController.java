@@ -17,7 +17,7 @@ public interface IPersonController {
 
         @GetMapping(value = "/{id}", produces = { Constants.APPLICATION_JSON, Constants.APPLICATION_XML,
                         Constants.APPLICATION_YML })
-        public ResponseEntity<PersonVO> findByid(@PathVariable Long id);
+        public ResponseEntity<PersonVO> findById(@PathVariable Long id);
 
         @GetMapping(value = "/", produces = { Constants.APPLICATION_JSON, Constants.APPLICATION_XML,
                         Constants.APPLICATION_YML })

@@ -20,7 +20,7 @@ public class PersonController implements IPersonController {
   }
 
   @Override
-  public ResponseEntity<PersonVO> findByid(Long id) {
+  public ResponseEntity<PersonVO> findById(Long id) {
     return ResponseEntity.ok(service.findById(id));
   }
 

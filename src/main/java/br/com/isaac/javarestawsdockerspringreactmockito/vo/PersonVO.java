@@ -2,6 +2,9 @@
 
 import java.io.Serializable;
 
+import org.dozer.Mapping;
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
@@ -13,12 +16,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode
-@JsonPropertyOrder({ "id", "firstName", "lastName", "address", "gender" })
-public class PersonVO implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+@JsonPropertyOrder({ "key", "firstName", "lastName", "address", "gender" })
+public class PersonVO extends RepresentationModel<PersonVO> implements Serializable {
   private static final long serialVersionUID = 1L;
 
-  private Long id;
+  @JsonProperty("id")
+  @Mapping("id")
+  private Long key;
 
   @JsonProperty("first_name")
   private String firstName;
