@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.utils;
+package br.com.isaac.javarestawsdockerspringreactmockito.utils;
 
 public class Constants {
   // Media Types

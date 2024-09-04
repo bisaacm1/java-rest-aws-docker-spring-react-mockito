@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.serialization.converter;
+package br.com.isaac.javarestawsdockerspringreactmockito.serialization.converter;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter;

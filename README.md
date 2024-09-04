@@ -13,7 +13,7 @@ Este projeto é uma aplicação demo construída com Spring Boot. O objetivo é 
 - **Docker**
 - **MySQL 8.0.33**
 - **Flyway 7.15.0**
-- **Dozer 6.1.0**
+- **Model Mapper 3.2.0**
 - **JUnit 5.8.2**
 - **Lombok**
 - **Amazon Web Services (AWS)**

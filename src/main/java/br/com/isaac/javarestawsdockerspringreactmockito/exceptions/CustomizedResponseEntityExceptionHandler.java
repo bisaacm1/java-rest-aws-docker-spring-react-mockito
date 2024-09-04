@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.exceptions;
+package br.com.isaac.javarestawsdockerspringreactmockito.exceptions;
 
 import java.util.Date;
 
@@ -32,6 +32,15 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 
     logger.error(EnumMessagesType.ERROR_UNSUPPERTED_MATH_OPERATION_ERROR.getMessage(), ex);
     return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
+  }
+
+  @ExceptionHandler(RequiredObjextIsNullException.class)
+  public final ResponseEntity<ExceptionResponse> handlerBadRequestExceptions(Exception ex, WebRequest request) {
+    ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
+        request.getDescription(false));
+
+    logger.error(EnumMessagesType.ERROR_UNSUPPERTED_MATH_OPERATION_ERROR.getMessage(), ex);
+    return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
   }
 
 }

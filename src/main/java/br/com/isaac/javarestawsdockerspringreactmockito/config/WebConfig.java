@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.config;
+package br.com.isaac.javarestawsdockerspringreactmockito.config;
 
 import java.util.List;
 

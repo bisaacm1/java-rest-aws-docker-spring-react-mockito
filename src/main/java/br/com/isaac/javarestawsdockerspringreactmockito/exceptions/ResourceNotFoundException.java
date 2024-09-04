@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.exceptions;
+package br.com.isaac.javarestawsdockerspringreactmockito.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -18,10 +18,13 @@
 
 	<properties>
 		<java.version>17</java.version>
-		<dozer.version>6.1.0</dozer.version>
+		<modelmapper.version>3.2.0</modelmapper.version>
 		<jupiter.version>5.8.2</jupiter.version>
 		<flyway.version>7.15.0</flyway.version>
 		<mysql.version>8.0.33</mysql.version>
+		<lombok.version>1.18.22</lombok.version>
+		<slf4j.version>1.7.36</slf4j.version>
+		<logback.version>1.2.11</logback.version>
 	</properties>
 
 	<dependencies>
@@ -54,48 +57,60 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- JUnit 5 for Testing -->
+		<!-- Logging -->
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>${jupiter.version}</version>
-			<scope>test</scope>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
 		</dependency>
 
-		<!-- Spring Boot Test for Integration Testing -->
+		<!-- Model Mapper -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>${modelmapper.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.github.dozermapper</groupId>
-			<artifactId>dozer-core</artifactId>
-			<version>${dozer.version}</version>
-		</dependency>
-
+		<!-- Flyway Migration -->
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 			<version>${flyway.version}</version>
 		</dependency>
 
+		<!-- Jackson Dataformat -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-yaml</artifactId>
 		</dependency>
+
+		<!-- Testing Dependencies -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

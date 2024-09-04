@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.utils;
+package br.com.isaac.javarestawsdockerspringreactmockito.utils;
 
 public enum EnumMessagesType {
     VALUE_SHOULD_BE_NUMBER("The value needs to be a number"),

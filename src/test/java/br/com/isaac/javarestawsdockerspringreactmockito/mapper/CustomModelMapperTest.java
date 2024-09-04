@@ -11,7 +11,7 @@ import br.com.isaac.javarestawsdockerspringreactmockito.mocks.MockPerson;
 import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
 import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
 
-public class DozerMapperTest {
+public class CustomModelMapperTest {
 
     MockPerson inputObject;
 
@@ -22,7 +22,7 @@ public class DozerMapperTest {
 
     @Test
     public void parseEntityToVOTest() {
-        PersonVO output = DozerMapper.parseObject(inputObject.mockEntity(), PersonVO.class);
+        PersonVO output = CustomModelMapper.parseObject(inputObject.mockEntity(), PersonVO.class);
         assertEquals(Long.valueOf(0L), output.getKey());
         assertEquals("First Name Test0", output.getFirstName());
         assertEquals("Last Name Test0", output.getLastName());
@@ -32,7 +32,7 @@ public class DozerMapperTest {
 
     @Test
     public void parseEntityListToVOListTest() {
-        List<PersonVO> outputList = DozerMapper.parseListObjects(inputObject.mockEntityList(), PersonVO.class);
+        List<PersonVO> outputList = CustomModelMapper.parseListObjects(inputObject.mockEntityList(), PersonVO.class);
         PersonVO outputZero = outputList.get(0);
 
         assertEquals(Long.valueOf(0L), outputZero.getKey());
@@ -60,7 +60,7 @@ public class DozerMapperTest {
 
     @Test
     public void parseVOToEntityTest() {
-        Person output = DozerMapper.parseObject(inputObject.mockVO(), Person.class);
+        Person output = CustomModelMapper.parseObject(inputObject.mockVO(), Person.class);
         assertEquals(Long.valueOf(0L), output.getId());
         assertEquals("First Name Test0", output.getFirstName());
         assertEquals("Last Name Test0", output.getLastName());
@@ -70,7 +70,7 @@ public class DozerMapperTest {
 
     @Test
     public void parserVOListToEntityListTest() {
-        List<Person> outputList = DozerMapper.parseListObjects(inputObject.mockVOList(), Person.class);
+        List<Person> outputList = CustomModelMapper.parseListObjects(inputObject.mockVOList(), Person.class);
         Person outputZero = outputList.get(0);
 
         assertEquals(Long.valueOf(0L), outputZero.getId());

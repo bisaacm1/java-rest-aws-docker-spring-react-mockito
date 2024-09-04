@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.exceptions;
+package br.com.isaac.javarestawsdockerspringreactmockito.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

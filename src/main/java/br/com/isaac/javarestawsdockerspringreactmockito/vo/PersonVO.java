@@ -1,8 +1,7 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.vo;
+package br.com.isaac.javarestawsdockerspringreactmockito.vo;
 
 import java.io.Serializable;
 
-import org.dozer.Mapping;
 import org.springframework.hateoas.RepresentationModel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,7 +21,6 @@ public class PersonVO extends RepresentationModel<PersonVO> implements Serializa
   private static final long serialVersionUID = 1L;
 
   @JsonProperty("id")
-  @Mapping("id")
   private Long key;
 
   @JsonProperty("first_name")

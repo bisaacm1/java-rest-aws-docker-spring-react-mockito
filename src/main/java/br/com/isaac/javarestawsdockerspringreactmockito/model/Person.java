@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.model;
+package br.com.isaac.javarestawsdockerspringreactmockito.model;
 
 import java.io.Serializable;
 
