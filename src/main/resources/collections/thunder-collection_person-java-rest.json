@@ -1,38 +1,38 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "person-java-rest",
-    "collectionId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
-    "dateExported": "2024-09-04T21:19:21.000Z",
+    "collectionId": "e5cf956b-f5bb-449e-82a1-668ce8f63e8b",
+    "dateExported": "2024-09-05T22:46:47.250Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "76162897-810e-440b-aa2e-14c46cd38e84",
-            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "_id": "a3779a59-83b9-4058-8566-1a6e5d0cb1c7",
+            "colId": "e5cf956b-f5bb-449e-82a1-668ce8f63e8b",
             "containerId": "",
             "name": "Person Update",
-            "url": "http://localhost:8080/api/person/v1/update",
+            "url": "http://localhost:8080/api/person/v1/",
             "method": "PUT",
             "sortNum": 10000,
-            "created": "2024-08-31T15:34:58.605Z",
-            "modified": "2024-09-04T21:17:28.081Z",
+            "created": "2024-09-04T21:19:34.615Z",
+            "modified": "2024-09-05T22:45:03.099Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"id\": 8,\n  \"first_name\": \"John ty\",\n  \"last_name\": \"Doe\",\n  \"address\": \"teste er t\",\n  \"gender\": \"Male\"\n}",
+                "raw": "{\n  \"id\": 7,\n  \"first_name\": \"John ty\",\n  \"last_name\": \"Doe\",\n  \"address\": \"teste er t\",\n  \"gender\": \"Male\"\n}",
                 "form": []
             }
         },
         {
-            "_id": "df791beb-cda9-45b2-9aef-8dc2bb64d5a3",
-            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "_id": "28812079-f608-4794-a3c8-ed2638613973",
+            "colId": "e5cf956b-f5bb-449e-82a1-668ce8f63e8b",
             "containerId": "",
             "name": "Person Get All",
             "url": "http://localhost:8080/api/person/v1/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-08-31T15:35:06.080Z",
-            "modified": "2024-09-04T21:17:38.598Z",
+            "created": "2024-09-04T21:19:34.616Z",
+            "modified": "2024-09-04T21:19:34.616Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -41,15 +41,15 @@
             ]
         },
         {
-            "_id": "2e144ba5-0346-4543-9a6e-f0bde4786a6e",
-            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "_id": "815f60c2-120d-44a3-95a6-ad41a359171e",
+            "colId": "e5cf956b-f5bb-449e-82a1-668ce8f63e8b",
             "containerId": "",
             "name": "Person Get By ID",
             "url": "http://localhost:8080/api/person/v1/9",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-08-31T15:35:10.686Z",
-            "modified": "2024-09-04T21:18:36.444Z",
+            "created": "2024-09-04T21:19:34.617Z",
+            "modified": "2024-09-04T21:19:34.617Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -63,15 +63,15 @@
             }
         },
         {
-            "_id": "74f9ea66-542e-4d38-b54b-de9e811c2e3b",
-            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "_id": "df3e1420-dd7a-4af2-8eb2-9f4254f43bb5",
+            "colId": "e5cf956b-f5bb-449e-82a1-668ce8f63e8b",
             "containerId": "",
             "name": "Person Create",
-            "url": "http://localhost:8080/api/person/v1/create",
+            "url": "http://localhost:8080/api/person/v1/",
             "method": "POST",
             "sortNum": 40000,
-            "created": "2024-08-31T15:35:15.997Z",
-            "modified": "2024-09-04T21:18:41.806Z",
+            "created": "2024-09-04T21:19:34.618Z",
+            "modified": "2024-09-05T22:44:00.440Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -85,22 +85,17 @@
             }
         },
         {
-            "_id": "e71d5ca3-6bae-4176-b39b-8a612345c682",
-            "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
+            "_id": "a30608a4-80c5-4de7-9473-2ab7c572a83f",
+            "colId": "e5cf956b-f5bb-449e-82a1-668ce8f63e8b",
             "containerId": "",
             "name": "Person Delete",
-            "url": "http://localhost:8080/api/person/v1/13",
+            "url": "http://localhost:8080/api/person/v1/7",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-08-31T15:35:20.188Z",
-            "modified": "2024-09-04T21:18:47.383Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"firstName\": \"Alexandre\",\n  \"lastName\": \"Menezes\",\n  \"address\": \"Orlando - EUA\",\n  \"gender\": \"Male\"\n}",
-                "form": []
-            }
+            "created": "2024-09-04T21:19:34.619Z",
+            "modified": "2024-09-05T22:44:09.702Z",
+            "headers": []
         }
     ],
-    "ref": "n8mU99UDh0rS7CQ_ZlKJ68F6KSSa1YRSgb6X7D5kffGMgRqFD4Dhs4Od_Jwn7IQ_nIesE5eIwVM2DEv4zQXRpQ"
+    "ref": "Cars_FBwh95EY-I_bz4klyCm1EWPboxzGs72gn0mZnJeSr9MJ8gqQMoiN-731foJU5UuSVyy3v-wPcFsSEwR1Q"
 }
