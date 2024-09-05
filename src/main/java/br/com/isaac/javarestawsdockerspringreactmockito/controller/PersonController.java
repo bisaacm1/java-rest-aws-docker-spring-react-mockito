@@ -10,7 +10,7 @@ import br.com.isaac.javarestawsdockerspringreactmockito.service.PersonService;
 import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("api/person/v1")
 public class PersonController implements IPersonController {
 
   private final PersonService service;

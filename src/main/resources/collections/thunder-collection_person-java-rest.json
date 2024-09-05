@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "person-java-rest",
     "collectionId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
-    "dateExported": "2024-08-31T15:35:36.282Z",
+    "dateExported": "2024-09-04T21:19:21.000Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -11,15 +11,15 @@
             "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
             "containerId": "",
             "name": "Person Update",
-            "url": "http://localhost:8080/person/update",
+            "url": "http://localhost:8080/api/person/v1/update",
             "method": "PUT",
             "sortNum": 10000,
             "created": "2024-08-31T15:34:58.605Z",
-            "modified": "2024-08-31T15:34:58.605Z",
+            "modified": "2024-09-04T21:17:28.081Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"id\": 11,\n  \"first_name\": \"John ty\",\n  \"last_name\": \"Doe\",\n  \"address\": \"teste er t\",\n  \"gender\": \"Male\"\n}",
+                "raw": "{\n  \"id\": 8,\n  \"first_name\": \"John ty\",\n  \"last_name\": \"Doe\",\n  \"address\": \"teste er t\",\n  \"gender\": \"Male\"\n}",
                 "form": []
             }
         },
@@ -28,11 +28,11 @@
             "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
             "containerId": "",
             "name": "Person Get All",
-            "url": "http://localhost:8080/person/",
+            "url": "http://localhost:8080/api/person/v1/",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-08-31T15:35:06.080Z",
-            "modified": "2024-08-31T15:35:06.080Z",
+            "modified": "2024-09-04T21:17:38.598Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -45,11 +45,11 @@
             "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
             "containerId": "",
             "name": "Person Get By ID",
-            "url": "http://localhost:8080/person/9",
+            "url": "http://localhost:8080/api/person/v1/9",
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-08-31T15:35:10.686Z",
-            "modified": "2024-08-31T15:35:10.686Z",
+            "modified": "2024-09-04T21:18:36.444Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -67,11 +67,11 @@
             "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
             "containerId": "",
             "name": "Person Create",
-            "url": "http://localhost:8080/person/create",
+            "url": "http://localhost:8080/api/person/v1/create",
             "method": "POST",
             "sortNum": 40000,
             "created": "2024-08-31T15:35:15.997Z",
-            "modified": "2024-08-31T15:35:15.997Z",
+            "modified": "2024-09-04T21:18:41.806Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -80,7 +80,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"address\": \"teste er\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"gender\": \"Male\"\n}\n",
+                "raw": "{\n  \"address\": \"teste etrer\",\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"gender\": \"Male\"\n}\n",
                 "form": []
             }
         },
@@ -89,11 +89,11 @@
             "colId": "5a7cecbf-d2fa-429f-935f-ed030f01e87f",
             "containerId": "",
             "name": "Person Delete",
-            "url": "http://localhost:8080/person/8",
+            "url": "http://localhost:8080/api/person/v1/13",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-08-31T15:35:20.188Z",
-            "modified": "2024-08-31T15:35:20.188Z",
+            "modified": "2024-09-04T21:18:47.383Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -102,5 +102,5 @@
             }
         }
     ],
-    "ref": "n8mU99UDh0rS7CQ_ZlKJ63HeEfI_mnFWONpvQwdBwMU8Ku9bW6BgJ1y7PDcJfhaL3zz5A3UP5K5WTOk68XZgzQ"
+    "ref": "n8mU99UDh0rS7CQ_ZlKJ68F6KSSa1YRSgb6X7D5kffGMgRqFD4Dhs4Od_Jwn7IQ_nIesE5eIwVM2DEv4zQXRpQ"
 }

@@ -10,7 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import br.com.isaac.javarestawsdockerspringreactmockito.serialization.converter.YamlJackson2HttpMessageConverter;
 import br.com.isaac.javarestawsdockerspringreactmockito.utils.Constants;
-import br.com.isaac.javarestawsdockerspringreactmockito.utils.EnumMessagesType;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
@@ -30,9 +29,9 @@ public class WebConfig implements WebMvcConfigurer {
         .ignoreAcceptHeader(false)
         .useRegisteredExtensionsOnly(false)
         .defaultContentType(MediaType.APPLICATION_JSON)
-        .mediaType(EnumMessagesType.JSON.getMessage(), MediaType.APPLICATION_JSON)
-        .mediaType(EnumMessagesType.XML.getMessage(), MediaType.APPLICATION_XML)
-        .mediaType(EnumMessagesType.X_YAML.getMessage(), MEDIA_TYPE_APPLICATION_YML);
+        .mediaType(Constants.JSON, MediaType.APPLICATION_JSON)
+        .mediaType(Constants.XML, MediaType.APPLICATION_XML)
+        .mediaType(Constants.X_YAML, MEDIA_TYPE_APPLICATION_YML);
   }
 
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.isaac.javarestawsdockerspringreactmockito.utils.EnumMessagesType;
+import br.com.isaac.javarestawsdockerspringreactmockito.utils.Constants;
 
 @ControllerAdvice
 @RestController
@@ -21,7 +21,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
     ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
         request.getDescription(false));
 
-    logger.error(EnumMessagesType.INTERNAL_ERROR.getMessage(), ex);
+    logger.error(Constants.INTERNAL_ERROR, ex);
     return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
@@ -30,7 +30,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
     ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
         request.getDescription(false));
 
-    logger.error(EnumMessagesType.ERROR_UNSUPPERTED_MATH_OPERATION_ERROR.getMessage(), ex);
+    logger.error(Constants.UNSUPPORTED_OPERATION, ex);
     return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
   }
 
@@ -39,7 +39,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
     ExceptionResponse exceptionResponse = new ExceptionResponse(new Date(), ex.getMessage(),
         request.getDescription(false));
 
-    logger.error(EnumMessagesType.ERROR_UNSUPPERTED_MATH_OPERATION_ERROR.getMessage(), ex);
+    logger.error(Constants.UNSUPPORTED_OPERATION, ex);
     return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
   }
 

@@ -16,6 +16,7 @@ import br.com.isaac.javarestawsdockerspringreactmockito.exceptions.ResourceNotFo
 import br.com.isaac.javarestawsdockerspringreactmockito.mapper.CustomModelMapper;
 import br.com.isaac.javarestawsdockerspringreactmockito.model.Person;
 import br.com.isaac.javarestawsdockerspringreactmockito.repository.PersonRepository;
+import br.com.isaac.javarestawsdockerspringreactmockito.utils.Constants;
 import br.com.isaac.javarestawsdockerspringreactmockito.vo.PersonVO;
 
 @Service
@@ -43,7 +44,7 @@ public class PersonService implements PersonServiceImpl {
     logger.info("Finding person with id: {}", id);
 
     Person entity = personRepository.findById(id)
-        .orElseThrow(() -> new ResourceNotFoundException("No records found for this id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException(Constants.ID_NOT_FOUND + id));
 
     PersonVO personVo = CustomModelMapper.parseObject(entity, PersonVO.class);
 
@@ -74,7 +75,8 @@ public class PersonService implements PersonServiceImpl {
     logger.info("Updating person with id: {}", person.getKey());
 
     Person entity = personRepository.findById(person.getKey())
-        .orElseThrow(() -> new ResourceNotFoundException("No records found for this id: " + person.getKey()));
+        .orElseThrow(() -> new ResourceNotFoundException(
+            Constants.ID_NOT_FOUND + person.getKey()));
 
     entity.setFirstName(person.getFirstName());
     entity.setLastName(person.getLastName());
@@ -94,7 +96,7 @@ public class PersonService implements PersonServiceImpl {
     logger.info("Deleting person with id: {}", id);
 
     Person entity = personRepository.findById(id)
-        .orElseThrow(() -> new ResourceNotFoundException("No records found for this id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException(Constants.ID_NOT_FOUND + id));
 
     personRepository.delete(entity);
   }
