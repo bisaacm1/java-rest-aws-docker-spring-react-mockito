@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.controllers.book;
+package br.com.isaac.javarestawsdockerspringreactmockito.controllers.book;
 
 import java.util.List;
 

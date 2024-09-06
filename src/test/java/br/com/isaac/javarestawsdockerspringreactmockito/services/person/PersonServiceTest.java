@@ -18,11 +18,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import br.com.isaac.javarestawsdockerspringreactmockito.dtos.PersonDTO;
-import br.com.isaac.javarestawsdockerspringreactmockito.mocks.MockPerson;
+import br.com.isaac.javarestawsdockerspringreactmockito.mocks.MockData;
 import br.com.isaac.javarestawsdockerspringreactmockito.models.Person;
 import br.com.isaac.javarestawsdockerspringreactmockito.repositories.PersonRepository;
 import br.com.isaac.javarestawsdockerspringreactmockito.shared.exceptions.RequiredObjectIsNullException;
@@ -31,9 +29,7 @@ import br.com.isaac.javarestawsdockerspringreactmockito.shared.exceptions.Requir
 @ExtendWith(MockitoExtension.class)
 public class PersonServiceTest {
 
-  private static final Logger logger = LoggerFactory.getLogger(PersonServiceTest.class);
-
-  private MockPerson input;
+  private MockData mockData;
 
   @InjectMocks
   private PersonService service;
@@ -43,15 +39,13 @@ public class PersonServiceTest {
 
   @BeforeEach
   void setUp() {
-    input = new MockPerson();
+    mockData = new MockData();
     MockitoAnnotations.openMocks(this);
   }
 
   @Test
   void testFindById() {
-    Person person = input.mockEntity();
-    person.setId(1L);
-
+    Person person = mockData.createPersonEntity(1);
     when(repository.findById(1L)).thenReturn(Optional.of(person));
 
     PersonDTO result = service.findById(1L);
@@ -59,101 +53,89 @@ public class PersonServiceTest {
     assertNotNull(result);
     assertNotNull(result.getKey());
     assertNotNull(result.getLinks());
-    assertTrue(result.toString().contains("links: [</person/1>;rel=\"self\"]"));
-    assertEquals("Addres Test0", result.getAddress());
-    assertEquals("First Name Test0", result.getFirstName());
-    assertEquals("Last Name Test0", result.getLastName());
-    assertEquals("Male", result.getGender());
+    assertTrue(result.toString().contains("links: [</api/person/v1/1>;rel=\"self\"]"));
+    assertEquals("Address Test 1", result.getAddress());
+    assertEquals("First Name Test 1", result.getFirstName());
+    assertEquals("Last Name Test 1", result.getLastName());
+    assertEquals("Female", result.getGender());
   }
 
   @Test
   void testFindAll() {
-    List<Person> person = input.mockEntityList();
-
-    when(repository.findAll()).thenReturn(person);
+    List<Person> people = mockData.createPersonEntityList(14);
+    when(repository.findAll()).thenReturn(people);
 
     List<PersonDTO> result = service.findAll();
 
     assertNotNull(result);
     assertEquals(14, result.size());
 
-    PersonDTO resultList = result.get(0);
+    PersonDTO firstPerson = result.get(0);
 
-    assertNotNull(resultList.getKey());
-    assertNotNull(resultList.getLinks());
-    assertEquals("Addres Test0", resultList.getAddress());
-    assertEquals("First Name Test0", resultList.getFirstName());
-    assertEquals("Last Name Test0", resultList.getLastName());
-    assertEquals("Male", resultList.getGender());
+    assertNotNull(firstPerson.getKey());
+    assertNotNull(firstPerson.getLinks());
+    assertEquals("Address Test 0", firstPerson.getAddress());
+    assertEquals("First Name Test 0", firstPerson.getFirstName());
+    assertEquals("Last Name Test 0", firstPerson.getLastName());
+    assertEquals("Male", firstPerson.getGender());
   }
 
   @Test
   void testCreate() {
-    Person entity = input.mockEntity();
-
-    Person persisted = entity;
+    Person entity = mockData.createPersonEntity(0);
+    Person persisted = mockData.createPersonEntity(1);
     persisted.setId(1L);
-
-    PersonDTO vo = input.mockVO(1);
-    vo.setKey(1L);
+    PersonDTO dto = mockData.createPersonDTO(1);
+    dto.setKey(1L);
 
     when(repository.save(any(Person.class))).thenReturn(persisted);
 
-    PersonDTO result = service.create(vo);
+    PersonDTO result = service.create(dto);
 
     assertNotNull(result);
     assertNotNull(result.getKey());
     assertNotNull(result.getLinks());
-    assertTrue(result.toString().contains("links: [</person/1>;rel=\"self\"]"));
-    assertEquals("Addres Test0", result.getAddress());
-    assertEquals("First Name Test0", result.getFirstName());
-    assertEquals("Last Name Test0", result.getLastName());
-    assertEquals("Male", result.getGender());
+    assertTrue(result.toString().contains("links: [</api/person/v1/1>;rel=\"self\"]"));
+    assertEquals("Address Test 1", result.getAddress());
+    assertEquals("First Name Test 1", result.getFirstName());
+    assertEquals("Last Name Test 1", result.getLastName());
+    assertEquals("Female", result.getGender());
   }
 
   @Test
   void testCreateWithNullPerson() {
-    Exception exception = assertThrows(RequiredObjectIsNullException.class, () -> {
-      service.create(null);
-    });
+    Exception exception = assertThrows(RequiredObjectIsNullException.class, () -> service.create(null));
 
     String expectedMessage = "It is not allowed to persist a null object!";
-    String actualMessage = exception.getMessage();
-
-    assertTrue(actualMessage.contains(expectedMessage));
+    assertEquals(expectedMessage, exception.getMessage());
   }
 
   @Test
   void testUpdate() {
-    Person entity = input.mockEntity();
-    entity.setId(1L);
-
-    Person persisted = entity;
+    Person entity = mockData.createPersonEntity(1);
+    Person persisted = mockData.createPersonEntity(1);
     persisted.setId(1L);
-
-    PersonDTO vo = input.mockVO(1);
-    vo.setKey(1L);
+    PersonDTO dto = mockData.createPersonDTO(1);
+    dto.setKey(1L);
 
     when(repository.findById(1L)).thenReturn(Optional.of(entity));
     when(repository.save(any(Person.class))).thenReturn(persisted);
 
-    PersonDTO result = service.update(vo);
+    PersonDTO result = service.update(dto);
 
     assertNotNull(result);
     assertNotNull(result.getKey());
     assertNotNull(result.getLinks());
-    assertTrue(result.toString().contains("links: [</person/1>;rel=\"self\"]"));
-    assertEquals("Addres Test1", result.getAddress());
-    assertEquals("First Name Test1", result.getFirstName());
-    assertEquals("Last Name Test1", result.getLastName());
+    assertTrue(result.toString().contains("links: [</api/person/v1/1>;rel=\"self\"]"));
+    assertEquals("Address Test 1", result.getAddress());
+    assertEquals("First Name Test 1", result.getFirstName());
+    assertEquals("Last Name Test 1", result.getLastName());
     assertEquals("Female", result.getGender());
   }
 
   @Test
   void testDelete() {
-    Person person = input.mockEntity();
-    person.setId(1L);
-
+    Person person = mockData.createPersonEntity(1);
     when(repository.findById(1L)).thenReturn(Optional.of(person));
 
     service.delete(1L);

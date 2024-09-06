@@ -1,4 +1,4 @@
-﻿package br.com.isaac.javarestawsdockerspringreactmockito.services.book;
+package br.com.isaac.javarestawsdockerspringreactmockito.services.book;
 
 import java.util.List;
 
