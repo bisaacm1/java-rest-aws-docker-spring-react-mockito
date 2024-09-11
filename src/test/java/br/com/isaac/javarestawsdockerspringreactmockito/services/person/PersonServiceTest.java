@@ -82,7 +82,6 @@ public class PersonServiceTest {
 
   @Test
   void testCreate() {
-    Person entity = mockData.createPersonEntity(0);
     Person persisted = mockData.createPersonEntity(1);
     persisted.setId(1L);
     PersonDTO dto = mockData.createPersonDTO(1);

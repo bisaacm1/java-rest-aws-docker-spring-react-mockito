@@ -1,90 +1,114 @@
 ﻿# 🌐 **Java REST API with Spring Boot**
 
-## 📝 **Description**
+## 📝 **Project Overview**
 
-Welcome to this demo project built with Spring Boot! 🚀 The aim here is to create a RESTful API using Spring Boot, MySQL, and various awesome tools like Swagger, Flyway, and ModelMapper. Note that AWS and Docker configurations are not yet included in this project.
+Welcome to my demo project! 🚀 This Spring Boot-based RESTful API is built with best practices in mind, leveraging powerful tools and technologies like MySQL, Flyway, ModelMapper, and Swagger. Although AWS and Docker configurations aren't included yet, this project provides a strong starting point for building robust and maintainable applications.
 
 ---
 
-## 🛠 **Tools and Technologies**
+## 🛠 **Tech Stack & Tools**
 
-- **Spring Boot**: 2.6.3
-- **Java**: 17 ☕️
+Here's a rundown of the core tools and technologies used in this project:
+
+- **Spring Boot**: 3.0.1 🚀
+- **Java**: 18 ☕️
 - **MySQL**: 8.0.33 🗄
-- **Flyway**: 7.15.0 🔄
+- **Flyway**: 8.x 🔄
 - **ModelMapper**: 3.2.0 🗺
-- **JUnit 5**: 5.8.2 ✅
+- **JUnit 5**: 5.x ✅
 - **Lombok**: 1.18.22 ✨
-- **Swagger (Springdoc OpenAPI)**: 1.6.15 📜
-- **SLF4J and Logback**: For logging 🔍
+- **Swagger (Springdoc OpenAPI)**: 2.0.2 📜
+- **SLF4J and Logback**: Logging 🔍
+- **TestContainers**: 1.16.3 🧪
+- **Rest Assured**: 4.5.0 🌐
 
 ---
 
-## ⚙️ **Project Setup**
+## ⚙️ **Getting Started**
 
 ### **Prerequisites**
 
-Before you dive in, make sure you have the following tools installed:
+Before diving in, ensure that you have the following installed:
 
-- ☕️ **Java 17**: [Download Java 17](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
-- 🗄 **MySQL**: Install it locally or set up an instance on a database server.
+- ☕️ **Java 18**: [Download Java 18](https://www.oracle.com/java/technologies/javase-jdk18-downloads.html)
+- 🗄 **MySQL**: Set it up locally or via a cloud database service.
 
 ### **Clone the Repository**
 
-Ready to start? Clone the repository with:
+Ready to jump in? Clone the repository with the following command:
 
 ```bash
 git clone https://github.com/bisaacm1/java-rest-aws-docker-spring-react-mockito
 ```
 
-### **Build and Run the Project**
+### **Build and Run**
 
-Navigate to the project directory:
+Once you've cloned the repository, navigate to the project directory and build the project:
 
 ```bash
 cd java-rest-aws-docker-spring-react-mockito
+./mvnw clean install
 ```
 
-Compile and run the project:
+Now, run the Spring Boot application:
 
 ```bash
-./mvnw clean install
 ./mvnw spring-boot:run
 ```
 
-### 📜 **Swagger Documentation**
+---
 
-Explore the API easily with Swagger UI! After starting the application, open Swagger UI at:
+## 📜 **Swagger API Documentation**
+
+Explore the API seamlessly with Swagger! Once the application is running, you can access the Swagger UI by navigating to:
 
 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-It offers interactive documentation and lets you test API endpoints directly. 🎯
+Swagger provides interactive API documentation, allowing you to test endpoints directly from the UI. 🎯
 
-### 🔄 **Database Migration with Flyway**
+---
 
-Flyway handles database migrations for you. Place your migrations in the `src/main/resources/db/migration` directory. Flyway will automatically apply any pending migrations when the app starts. 🔄
+## 🔄 **Database Migration with Flyway**
+
+Database migrations are a breeze with Flyway. Just place your migration scripts in the `src/main/resources/db/migration` directory, and Flyway will automatically apply them when the application starts. 🔄
 
 ---
 
 ## 🛠 **Project Structure**
 
-Here's how the project is organized:
+The project is organized into the following key directories:
 
-- **controllers**: Manages HTTP requests.
+- **controllers**: Handles HTTP requests.
   - `book`: Endpoints for book-related operations.
   - `person`: Endpoints for person-related operations.
-- **dtos**: Data Transfer Objects for data encapsulation. 📦
-- **mappers**: For model mapping (e.g., CustomModelMapper). 🗺
-- **models**: Domain models representing entities (e.g., Book). 📚
-- **repositories**: Interfaces for data access. 🔍
-- **services**: Business logic and service layer.
+- **dtos**: Data Transfer Objects for encapsulating data. 📦
+- **mappers**: Model mapping (e.g., `CustomModelMapper`). 🗺
+- **models**: Domain models representing entities (e.g., `Book`). 📚
+- **repositories**: Interfaces for database interactions. 🔍
+- **services**: Implements business logic and services.
   - `book`: Services related to books. 📖
   - `person`: Services related to people. 🧑‍🤝‍🧑
-- **shared**: Common utilities, configuration, exceptions, and serializers. 🔧
+- **shared**: Common utilities, configurations, exceptions, and serializers. 🔧
+- **resources-collections**: Postman and ThunderClient collections for API testing. 📑
 
-### 🔍 **Testing**
+---
 
-Run tests with JUnit 5 and Mockito using:
+## 📁 **Postman and Thunder Client Collections**
+
+To facilitate testing the API, we've included pre-configured collections for both Postman and Thunder Client in the `resources-collections` folder. You can easily import these into your preferred tool to get started with the available endpoints.
+
+- **Postman Collection**: Located in `resources-collections/postman_collection.json`
+- **Thunder Client Collection**: Located in `resources-collections/thunderclient_collection.json`
+
+These collections use dynamic variables like `{{baseUrl}}` for flexibility. Make sure to set up your environment variables or replace `{{baseUrl}}` with your actual server address (e.g., `http://localhost:8080`).
+
+---
+
+## 🔍 **Testing**
+
+Testing is essential to ensure the stability and reliability of your code. This project utilizes **JUnit 5**, **Mockito**, **TestContainers**, and **Rest Assured** for comprehensive testing:
+
+Run tests with:
 
 ```bash
 ./mvnw test
@@ -92,14 +116,28 @@ Run tests with JUnit 5 and Mockito using:
 
 ---
 
+## 🚀 **Future Enhancements**
+
+There are several enhancements planned for the future:
+
+- 🐳 **Docker Integration**: Containerize the application for consistent and scalable deployment.
+- ☁️ **AWS Setup**: Deploy to AWS with S3, RDS, and other cloud services.
+- 🧑‍💻 **CI/CD Pipeline**: Automate the build and deployment process using GitHub Actions or Jenkins.
+
+---
+
 ## 📝 **License**
 
-This project is licensed under the MIT License. Check out the LICENSE file for details. 📜
+This project is licensed under the MIT License. For more details, refer to the [LICENSE](LICENSE) file. 📜
 
-### 📞 **Contact**
+---
 
-Got questions or need support? Reach out to me:
+## 📞 **Contact**
 
-- 📧 Email: [isaacbmaciel@gmail.com](mailto:isaacbmaciel@gmail.com)
-- 🔗 LinkedIn: [Isaac Batista Maciel](https://www.linkedin.com/in/isaac-batista-maciel/)
-- 💻 GitHub: [bisaacm1/java-rest-aws-docker-spring-react-mockito](https://github.com/bisaacm1/java-rest-aws-docker-spring-react-mockito)
+If you have any questions or would like to discuss this project further, feel free to reach out to me:
+
+- 📧 **Email**: [isaacbmaciel@gmail.com](mailto:isaacbmaciel@gmail.com)
+- 🔗 **LinkedIn**: [Isaac Batista Maciel](https://www.linkedin.com/in/isaac-batista-maciel/)
+- 💻 **GitHub**: [bisaacm1](https://github.com/bisaacm1)
+
+Looking forward to connecting with you! 😊

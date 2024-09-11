@@ -21,19 +21,15 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-
 import br.com.isaac.javarestawsdockerspringreactmockito.dtos.BookDTO;
 import br.com.isaac.javarestawsdockerspringreactmockito.mocks.MockData;
 import br.com.isaac.javarestawsdockerspringreactmockito.models.Book;
 import br.com.isaac.javarestawsdockerspringreactmockito.repositories.BookRepository;
-import br.com.isaac.javarestawsdockerspringreactmockito.services.person.PersonService;
 import br.com.isaac.javarestawsdockerspringreactmockito.shared.exceptions.RequiredObjectIsNullException;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @ExtendWith(MockitoExtension.class)
 public class BookServiceTest {
-
-
 
   @InjectMocks
   private BookService service;

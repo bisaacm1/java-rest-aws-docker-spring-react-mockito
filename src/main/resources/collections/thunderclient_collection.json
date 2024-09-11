@@ -1,0 +1,271 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "RESTful API with Spring Boot, Docker, and AWS",
+    "collectionId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+    "dateExported": "2024-09-10T19:01:04.102Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "097c9dd6-a129-464d-bb29-3a6fe70fd24c",
+            "name": "api",
+            "containerId": "",
+            "created": "2024-09-10T18:03:59.601Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "573663a7-810e-42d2-b6ed-66a8ff647a51",
+            "name": "person",
+            "containerId": "097c9dd6-a129-464d-bb29-3a6fe70fd24c",
+            "created": "2024-09-10T18:03:59.602Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "88c70994-bc49-4343-9338-e300e06e427e",
+            "name": "v1",
+            "containerId": "573663a7-810e-42d2-b6ed-66a8ff647a51",
+            "created": "2024-09-10T18:03:59.603Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "7e18d04d-bcb4-4ea2-863d-4cd647a8902e",
+            "name": "book",
+            "containerId": "097c9dd6-a129-464d-bb29-3a6fe70fd24c",
+            "created": "2024-09-10T18:03:59.604Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "68c7d08a-d82f-44dc-b6fa-eb08ddcf38b7",
+            "name": "v1",
+            "containerId": "7e18d04d-bcb4-4ea2-863d-4cd647a8902e",
+            "created": "2024-09-10T18:03:59.606Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "716b9102-9d42-4e79-a247-6d30a95b2118",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "88c70994-bc49-4343-9338-e300e06e427e",
+            "name": "Finds all People",
+            "url": "{{baseUrl}}/api/person/v1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-09-10T18:03:59.602Z",
+            "modified": "2024-09-10T18:03:59.602Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "a746efc5-fe49-4859-8ef8-d45db76c453c",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "88c70994-bc49-4343-9338-e300e06e427e",
+            "name": "Updates an existing Person",
+            "url": "{{baseUrl}}/api/person/v1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-09-10T18:03:59.603Z",
+            "modified": "2024-09-10T18:03:59.603Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"<long>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"links\": [\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+            }
+        },
+        {
+            "_id": "2a0fd3c8-acb2-4c81-80a9-5ce88bcde5e5",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "88c70994-bc49-4343-9338-e300e06e427e",
+            "name": "Adds a new Person",
+            "url": "{{baseUrl}}/api/person/v1",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-09-10T18:03:59.604Z",
+            "modified": "2024-09-10T18:03:59.604Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"<long>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"links\": [\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+            }
+        },
+        {
+            "_id": "2f5e2453-d432-4b11-a349-201c54f447a8",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "88c70994-bc49-4343-9338-e300e06e427e",
+            "name": "Finds a Person",
+            "url": "{{baseUrl}}/api/person/v1/{id}",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-09-10T18:03:59.605Z",
+            "modified": "2024-09-10T18:03:59.605Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "<long>",
+                    "isDisabled": false,
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "f39b3e5e-2198-4ad6-a3fa-9c3bec8b7df2",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "88c70994-bc49-4343-9338-e300e06e427e",
+            "name": "Deletes a Person",
+            "url": "{{baseUrl}}/api/person/v1/{id}",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-09-10T18:03:59.606Z",
+            "modified": "2024-09-10T18:03:59.606Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "<long>",
+                    "isDisabled": false,
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "0c7fb881-edf7-420b-93bb-0d207e434443",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "68c7d08a-d82f-44dc-b6fa-eb08ddcf38b7",
+            "name": "Finds all Books",
+            "url": "{{baseUrl}}/api/book/v1",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-09-10T18:03:59.607Z",
+            "modified": "2024-09-10T18:03:59.607Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "30a2549b-6e95-4f8a-aa98-336835313724",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "68c7d08a-d82f-44dc-b6fa-eb08ddcf38b7",
+            "name": "Updates an existing Book",
+            "url": "{{baseUrl}}/api/book/v1",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-09-10T18:03:59.608Z",
+            "modified": "2024-09-10T18:03:59.608Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"<long>\",\n  \"author\": \"<string>\",\n  \"launch_date\": \"<dateTime>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"links\": [\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+            }
+        },
+        {
+            "_id": "b6c42243-f2a5-46d3-81f0-3dba44463924",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "68c7d08a-d82f-44dc-b6fa-eb08ddcf38b7",
+            "name": "Adds a new Book",
+            "url": "{{baseUrl}}/api/book/v1",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-09-10T18:03:59.609Z",
+            "modified": "2024-09-10T18:03:59.609Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"<long>\",\n  \"author\": \"<string>\",\n  \"launch_date\": \"<dateTime>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"links\": [\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"rel\": \"<string>\",\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"media\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+            }
+        },
+        {
+            "_id": "fa713f0e-1730-4026-87f1-2443455f95c6",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "68c7d08a-d82f-44dc-b6fa-eb08ddcf38b7",
+            "name": "Finds a Book by ID",
+            "url": "{{baseUrl}}/api/book/v1/{id}",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-09-10T18:03:59.610Z",
+            "modified": "2024-09-10T18:03:59.610Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "<long>",
+                    "isDisabled": false,
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "708a0725-dce8-4e6a-9b17-215d293377da",
+            "colId": "5afd9ee7-af1a-4a08-8cbb-e11cbaf3446f",
+            "containerId": "68c7d08a-d82f-44dc-b6fa-eb08ddcf38b7",
+            "name": "Deletes a Book",
+            "url": "{{baseUrl}}/api/book/v1/{id}",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-09-10T18:03:59.611Z",
+            "modified": "2024-09-10T18:03:59.611Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "<long>",
+                    "isDisabled": false,
+                    "isPath": true
+                }
+            ]
+        }
+    ],
+    "ref": "xJxlnSWWVXL6wrBURvWObD0M45WIktzGfxgaJZCfKMmRikUFZyZhOJOav6g2qi7bgYB9bowv3ZV3kzBUegU6zA"
+}

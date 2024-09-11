@@ -1,13 +1,26 @@
 package br.com.isaac.javarestawsdockerspringreactmockito;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootApplication
-public class JavaRestAwsDockerSpringReactMockitoTest {
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-	public static void main(String[] args) {
-		SpringApplication.run(JavaRestAwsDockerSpringReactMockito.class, args);
+@ExtendWith(MockitoExtension.class)
+class JavaRestAwsDockerSpringReactMockitoTest {
+
+	@InjectMocks
+	private JavaRestAwsDockerSpringReactMockito application;
+
+	@BeforeEach
+	void setUp() {
+		application = new JavaRestAwsDockerSpringReactMockito();
 	}
 
+	@Test
+	void testApplicationContext() {
+		assertNotNull(application);
+	}
 }
