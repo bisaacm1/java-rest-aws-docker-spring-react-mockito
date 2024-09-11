@@ -105,7 +105,7 @@ public class BookServiceTest {
   void testCreateWithNullBook() {
     Exception exception = assertThrows(RequiredObjectIsNullException.class, () -> service.create(null));
 
-    String expectedMessage = "It is not allowed to persist a null object!";
+    String expectedMessage = "Persisting a null object is not allowed!";
     assertEquals(expectedMessage, exception.getMessage(), "Exception message should match");
   }
 

@@ -11,6 +11,16 @@ import br.com.isaac.javarestawsdockerspringreactmockito.models.Person;
 
 public class MockData {
 
+    public static PersonDTO mockPersonDTO() {
+        PersonDTO person = new PersonDTO();
+        person.setKey(9L);
+        person.setFirstName("Richard");
+        person.setLastName("Stallman");
+        person.setAddress("New York City, New York, US");
+        person.setGender("Male");
+        return person;
+    }
+
     // Métodos para Person
     public Person createPersonEntity(int number) {
         Person person = new Person();

@@ -3,6 +3,7 @@ package br.com.isaac.javarestawsdockerspringreactmockito.controllers.person;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "People", description = "Endpoints for managing people")
 public interface IPersonController {
 
+        @CrossOrigin(origins = { Constants.ORIGIN_LOCALHOST_8080, Constants.ORIGIN_ISAAC })
         @GetMapping(value = "/{id}", produces = { Constants.APPLICATION_JSON, Constants.APPLICATION_XML,
                         Constants.APPLICATION_YML })
         @Operation(summary = "Finds a Person", description = "Retrieves a Person by their ID.", tags = {
